@@ -43,34 +43,35 @@ function Card() {
       return (
         <div class="card">
             <div class="image">
-              <div class="image-stack">
-                <div class="image-stack__item image-stack__item--top image-stack__item--top-transition">
-                  <img src={items[0].url} style={{height: '500px',width:'500px'}}/>
-                </div>
-                <div class="image-stack__item image-stack__item--bottom image-stack__item--bottom-transition">
-                  <img src={items[1].url} style={{height: '500px',width:'500px'}}/>
-                </div>
+              <div class="image-stack__item" style={{opacity:state + 1}}>
+                <img src={items[0].url} style={{height: '500px',width:'500px'}}/>
+              </div>
+              <div class="image-stack__item" style={{opacity:state - 700}}>
+                <img src={items[1].url} style={{height: '500px',width:'500px'}}/>
+              </div>
+              <div class="image-stack__item" style={{opacity:state - 1400}}>
+                <img src={items[2].url} style={{height: '500px',width:'500px'}}/>
               </div>
             </div>
             <div class="text"
                   ref={myRef}
                   onScroll={onScroll}>
-              <div  class="item">
-                {/* {items[0].title} */}
+              <div class="item">
+                {items[0].title}
                 <br/>
                 {items[0].date}
                 <br/>
                 {items[0].explanation}
               </div>
               <div class="item">
-                {/* {items[1].title} */}
+                {items[1].title}
                 <br/>
                 {items[1].date}
                 <br/>
                 {items[1].explanation}
               </div>
               <div class="item">
-                {/* {items[2].title} */}
+                {items[2].title}
                 <br/>
                 {items[2].date}
                 <br/>
