@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import logo from '../resources/logo.png'
 
 
 function Card() {
@@ -36,8 +36,9 @@ function Card() {
     return <div>Error: {error.message}</div>;
 
   } else if (!isLoaded) {
-    return <div>LOADING</div>;
+    // return <div>LOADING</div>;
 
+    return <img src={logo} className="Loading-logo" alt="loading" />
   } else {
     try {
       return (
